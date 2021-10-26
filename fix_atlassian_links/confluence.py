@@ -33,10 +33,10 @@ class FixConfluence(Confluence):
         content_body = "%s" % content["body"]["storage"]["value"]
 
         if args.literal == True:
-            result = content_body.replace(args.search_re, args.replace)
+            result = content_body.replace(args.search, args.replace)
             content_body = result
         elif args.literal == False:
-            result = re.sub(args.search_re, args.replace, content_body)
+            result = re.sub(args.search, args.replace, content_body)
             content_body = result
 
         title = args.title

@@ -16,7 +16,7 @@ Python script to fix (usually by search/replace) the HTTP[S] links in Atlassian 
 ```
 docker run --rm -it fix-atlassian-links \
     --page_id 123456 \
-    --search_re "https://my-old-domain" \
+    --search "https://my-old-domain" \
     --replace "https://my-new-domain" \
     --url "https://mycompany.atlassian.net/wiki" \
     --username "my-user@mydomain.com" \

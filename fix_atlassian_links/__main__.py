@@ -15,7 +15,7 @@ The 'get-page' action requires the following options:
 
 The 'search-replace-page' action requires the following options:
     --page_id
-    --search_re
+    --search
     --replace
 """
 
@@ -82,8 +82,8 @@ class Cmdline(object):
 
 
         elif self.args.action == 'search-replace-page':
-            if self.args.page_id == None or self.args.search_re == None or self.args.replace == None:
-                raise Exception("Please pass --page_id, --search_re, --replace")
+            if self.args.page_id == None or self.args.search == None or self.args.replace == None:
+                raise Exception("Please pass --page_id, --search, --replace")
 
             result = c.search_replace_content(self.args)
             print(json.dumps(result))
