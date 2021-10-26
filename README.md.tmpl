@@ -1,0 +1,28 @@
+# About
+
+Python script to fix (usually by search/replace) the HTTP[S] links in Atlassian products like Confluence, Jira, etc.
+
+# Install
+
+## Local install
+1. Run `pip install -e .`
+
+## Docker build
+1. Run `docker build -t fix-atlassian-links:latest .`
+
+# Usage
+
+## Example using Docker
+```
+docker run --rm -it fix-atlassian-links \
+    --page_id 123456 \
+    --search_re "https://my-old-domain" \
+    --replace "https://my-new-domain" \
+    --url "https://mycompany.atlassian.net/wiki" \
+    --username "my-user@mydomain.com" \
+    --auth_token "3h938h9h98hhr93hqhoq" \
+    search-replace-page
+```
+
+Run the installed `fix-atlassian-links` to see its usage.
+

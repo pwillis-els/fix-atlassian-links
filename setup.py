@@ -9,7 +9,7 @@ from setuptools import setup
 with open('requirements.txt') as f:
     install_requires = f.readlines()
 
-VERSION = "0.1"
+VERSION = "0.2"
 
 setup(
     name='fix-atlassian-links',
@@ -27,7 +27,7 @@ setup(
     ],
     install_requires=install_requires,
     entry_points={
-        'console_scripts': ['fix-atlassian-links=fix_atlassian_links.main:Main']
+        'console_scripts': ['fix-atlassian-links=fix_atlassian_links.__main__:main']
     },
     include_package_data=True,
     python_requires='>=3.2'
